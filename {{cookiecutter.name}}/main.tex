@@ -58,7 +58,9 @@
       {{cookiecutter.author_first}}\textbf{
       {{cookiecutter.author_last}}
       }
-    }- {{cookiecutter.author_phone}} - 
+    }- \textcolor{darkgray} {
+      {{cookiecutter.author_phone}} 
+    }- 
     \href{
       mailto:{{cookiecutter.author_email}} 
     }{
@@ -151,8 +153,7 @@
       {{cookiecutter.author_last}}
     }
   }\\
-  [.1ex]\scriptsize Research Group Leader\\
-  Senior Lecturer in Bioinformatics/Genomics
+  [.1ex]\scriptsize {{cookiecutter.author_position}}
 }
 \setkomavar{fromaddress}{\scriptsize
   {{cookiecutter.author_institute}}\\
@@ -170,19 +171,30 @@
   }
 }
 
-%\setkomavar{fromphone}{
-%  {{cookiecutter.author_phone}}
-%}
-%\setkomavar{fromemail}{
-%  {{cookiecutter.author_email}}
-%}
-%\setkomavar{fromfax}{}
-%\setkomavar{signature}{\includegraphics[width=2cm]{sig}\\
-%  {{cookiecutter.author_first}} {{cookiecutter.author_last}}
-%}
-\setkomavar{signature}{
-  {{cookiecutter.author_first}} {{cookiecutter.author_last}} 
+% signature closing left-aligned
+\renewcommand\raggedsignature{\raggedright}
+
+%\setkomavar{signature}{\hspace{0.5cm}\includegraphics[width=2cm]{sig}\\
+\setkomavar{signature}{ 
+  {{cookiecutter.author_first}} {{cookiecutter.author_last}}\\
+  \bigskip
+  \scriptsize
+  {{cookiecutter.author_position}}\\
+  {{cookiecutter.author_institute}}\\
+  {{cookiecutter.author_uni}}, {{cookiecutter.author_country}}\\
+  \faPhone\hspace{0.15cm}{{cookiecutter.author_phone}}\\
+  \faEnvelopeO\hspace{0.15cm}\href{
+    mailto:{{cookiecutter.author_email}}
+  }{
+    {{cookiecutter.author_email}}
+  } \\
+  \faExternalLink\hspace{0.15cm}\href{
+    {{cookiecutter.author_www}}
+  }{
+    {{cookiecutter.author_www}}
+  }
 }
+
 
 %% ======================================
 %% CUSTOMER NUMBER
@@ -212,20 +224,6 @@
 %% Not used as we overwrite the plain style used for first page above.
 %%\thispagestyle{fancy} % uncomment make same as last page footer
 %%--------------------------------------------
-
-I am writing in support of our manuscript submission to your journal
-for potential publication. We believe that the results of our study
-substantially advance the field of gene regulation and that of distant
-regulation of genes via enhancers in particular. 
-
-None of the authors declares any competing interests and all authors have
-approved the manuscript for submission. 
-There are no issues with regards to any of the journal policies.
-The content of the manuscript has not been published nor has it been submitted elsewhere.
-
-We hope that you find our work of interest and judge that our submission
-warrants review and ultimately publication. 
-Thank you very much.
 
 % some bla text
 \lipsum
