@@ -12,7 +12,7 @@
 \usepackage{fontawesome}
 
 %% colors
-%% allow html 
+%% allow html
 \usepackage[dvipsnames]{xcolor}
 \definecolor{MyBlue}{HTML}{3c4f68}
 \definecolor{light-gray}{gray}{0.95} %% good for source-code background
@@ -23,17 +23,17 @@
 %% backaddress = address over the sender address...
 \KOMAoptions{
   fromalign=left,
-  %fromalign=right,  
-  addrfield=true, 
-  backaddress=false, 
+  %fromalign=right,
+  addrfield=true,
+  backaddress=false,
   %subject=titled,  %% will put Subject: ...
   subject=left,
-  foldmarks=true, 
-  fromphone=false, 
+  foldmarks=true,
+  fromphone=false,
   frommobilephone=false,
   fromfax=off,
-  fromemail=false, 
-  fontsize=11, 
+  fromemail=false,
+  fontsize=11,
   fromlogo=true,
   firsthead=true,
   numericaldate=false,
@@ -53,41 +53,41 @@
 %% HEADER
 \fancyhead[R]{\raisebox{-0.65\baselineskip}[0pt][0pt]{\scriptsize \today}} %% add text to right sider of header
 \fancyhead[L]{\raisebox{-0.65\baselineskip}[0pt][0pt]{
-    \scriptsize 
+    \scriptsize
     \textcolor{MidnightBlue}{
       {{cookiecutter.author_first}}\textbf{
       {{cookiecutter.author_last}}
       }
     }- \textcolor{darkgray} {
-      {{cookiecutter.author_phone}} 
-    }- 
+      {{cookiecutter.author_phone}}
+    }-
     \href{
-      mailto:{{cookiecutter.author_email}} 
+      mailto:{{cookiecutter.author_email}}
     }{
-      {{cookiecutter.author_email}} 
-    }- 
-    \href{ 
-      {{cookiecutter.author_www}} 
-    }{ 
-      {{cookiecutter.author_www}} 
+      {{cookiecutter.author_email}}
+    }-
+    \href{
+      {{cookiecutter.author_www}}
+    }{
+      {{cookiecutter.author_www}}
     }
   }
 } %% add text to left sider of header
 \renewcommand{\headrulewidth}{0pt} %% change to e.g. 1pt to get line under
-                                   %% header                                
-% line header                                  
+                                   %% header
+% line header
 \renewcommand{\headrule}{\hbox to\headwidth{\color{MidnightBlue}\leaders\hrule height \headrulewidth\hfill}}
-\renewcommand{\headrulewidth}{0.5pt} 
+\renewcommand{\headrulewidth}{0.5pt}
 
 %% FOOTER
 \fancyfoot[C]{}
 \fancyfoot[L]{
-  \scriptsize \textcolor{gray}{    
+  \scriptsize \textcolor{gray}{
    {{cookiecutter.author_institute}}\\
-   {{cookiecutter.author_uni}}\\
+   {{cookiecutter.author_college}}, {{cookiecutter.author_uni}}\\
    {{cookiecutter.author_mailbox}}\\
    {{cookiecutter.author_city}}\\
-   {{cookiecutter.author_country}} 
+   {{cookiecutter.author_country}}
   }
 }
 
@@ -107,7 +107,7 @@
    \fancyfoot[L]{
      \scriptsize \textcolor{gray}{
        {{cookiecutter.author_institute}}\\
-       {{cookiecutter.author_uni}}\\ 
+       {{cookiecutter.author_college}}, {{cookiecutter.author_uni}}\\
        {{cookiecutter.author_mailbox}}\\
        {{cookiecutter.author_city}}\\
        {{cookiecutter.author_country}}
@@ -123,7 +123,7 @@
 %% ======================================
 %% LINK COLORS
 %% specify link colors here
-\usepackage[colorlinks=true, urlcolor=darkgray, linkcolor=darkgray, citecolor=MidnightBlue]{hyperref} 
+\usepackage[colorlinks=true, urlcolor=darkgray, linkcolor=darkgray, citecolor=MidnightBlue]{hyperref}
 
 %% ======================================
 %% Change paper margins
@@ -175,7 +175,7 @@
 \renewcommand\raggedsignature{\raggedright}
 
 %\setkomavar{signature}{\hspace{0.5cm}\includegraphics[width=2cm]{sig}\\
-\setkomavar{signature}{ 
+\setkomavar{signature}{
   {{cookiecutter.author_first}} {{cookiecutter.author_last}}\\
   \bigskip
   \scriptsize
@@ -205,7 +205,7 @@
 %%% START %%%
 
 %% SUBJECT
-\setkomavar{subject}{ 
+\setkomavar{subject}{
   {{cookiecutter.subject}}
 }
 
