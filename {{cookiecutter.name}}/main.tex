@@ -54,11 +54,11 @@
 \fancyhead[R]{\raisebox{-0.65\baselineskip}[0pt][0pt]{\scriptsize \today}} %% add text to right sider of header
 \fancyhead[L]{\raisebox{-0.65\baselineskip}[0pt][0pt]{
     \scriptsize
-    \textcolor{MidnightBlue}{
+    \textcolor{MyBlue}{
       {{cookiecutter.author_first}}\textbf{
       {{cookiecutter.author_last}}
       }
-    }- \textcolor{darkgray} {
+    }- \textcolor{MyBlue} {
       {{cookiecutter.author_phone}}
     }-
     \href{
@@ -76,13 +76,13 @@
 \renewcommand{\headrulewidth}{0pt} %% change to e.g. 1pt to get line under
                                    %% header
 % line header
-\renewcommand{\headrule}{\hbox to\headwidth{\color{MidnightBlue}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{MyBlue}\leaders\hrule height \headrulewidth\hfill}}
 \renewcommand{\headrulewidth}{0.5pt}
 
 %% FOOTER
 \fancyfoot[C]{}
 \fancyfoot[L]{
-  \scriptsize \textcolor{gray}{
+  \scriptsize \textcolor{MyBlue}{
    {{cookiecutter.author_institute}}\\
    {{cookiecutter.author_college}}, {{cookiecutter.author_uni}}\\
    {{cookiecutter.author_mailbox}}\\
@@ -92,10 +92,10 @@
 }
 
 
-\fancyfoot[R]{\scriptsize \textcolor{gray}{\thepage\ (\pageref{LastPage})}} %% x (y)
+\fancyfoot[R]{\scriptsize \textcolor{darkgray}{\thepage\ (\pageref{LastPage})}} %% x (y)
 % line above footer
 %\renewcommand{\footrulewidth}{0.5pt} %% change to 0, e.g. pt to get no line
-%\renewcommand{\footrule}{\hbox to\headwidth{\color{MidnightBlue}\leaders\hrule height \footrulewidth\hfill}}
+%\renewcommand{\footrule}{\hbox to\headwidth{\color{MyBlue}\leaders\hrule height \footrulewidth\hfill}}
 
 
 %% first page footer style => only page number
@@ -105,7 +105,7 @@
    \renewcommand{\headrulewidth}{0mm}
    \renewcommand{\footrulewidth}{0mm}
    \fancyfoot[L]{
-     \scriptsize \textcolor{gray}{
+     \scriptsize \textcolor{MyBlue}{
        {{cookiecutter.author_institute}}\\
        {{cookiecutter.author_college}}, {{cookiecutter.author_uni}}\\
        {{cookiecutter.author_mailbox}}\\
@@ -113,17 +113,17 @@
        {{cookiecutter.author_country}}
      }
    }
-   \fancyfoot[R]{\scriptsize \textcolor{gray}{\thepage\ (\pageref{LastPage})}}
+   \fancyfoot[R]{\scriptsize \textcolor{darkgray}{\thepage\ (\pageref{LastPage})}}
    %% line
    %\renewcommand{\footrulewidth}{0.5pt} %% change to 0, e.g. pt to get no line
-   %\renewcommand{\footrule}{\hbox to\headwidth{\color{MidnightBlue}\leaders\hrule height \footrulewidth\hfill}}
+   %\renewcommand{\footrule}{\hbox to\headwidth{\color{MyBlue}\leaders\hrule height \footrulewidth\hfill}}
 }
 
 
 %% ======================================
 %% LINK COLORS
 %% specify link colors here
-\usepackage[colorlinks=true, urlcolor=darkgray, linkcolor=darkgray, citecolor=MidnightBlue]{hyperref}
+\usepackage[colorlinks=true, urlcolor=MyBlue, linkcolor=MyBlue, citecolor=MyBlue]{hyperref}
 
 %% ======================================
 %% Change paper margins
@@ -148,7 +148,7 @@
 %% ======================================
 %% SENDER
 
-\setkomavar{fromname}{\small \textcolor{MidnightBlue}{
+\setkomavar{fromname}{\small \textcolor{MyBlue}{
     {{cookiecutter.author_first}}\textbf{
       {{cookiecutter.author_last}}
     }
