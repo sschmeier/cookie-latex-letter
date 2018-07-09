@@ -58,14 +58,14 @@
       {{cookiecutter.author_first}}\textbf{
       {{cookiecutter.author_last}}
       }
-    }- \textcolor{MyBlue} {
+    }| \textcolor{MyBlue} {
       {{cookiecutter.author_phone}}
-    }-
+    }|
     \href{
       mailto:{{cookiecutter.author_email}}
     }{
       {{cookiecutter.author_email}}
-    }-
+    }|
     \href{
       {{cookiecutter.author_www}}
     }{
@@ -138,6 +138,17 @@
 %\renewcommand{\familydefault}{\sfdefault}
 \usepackage{fontspec}
 \setmainfont{Arial}
+
+% use OpenSans if available
+\defaultfontfeatures{
+    Ligatures = TeX,
+    Path      = ./Fonts/ }
+
+\IfFileExists{./Fonts/OpenSans-Light.ttf}{
+    \setmainfont[ BoldFont = OpenSans-SemiBold, ItalicFont = OpenSans-LightItalic ]{OpenSans-Light}
+    \setsansfont[ BoldFont = OpenSans-SemiBold, ItalicFont = OpenSans-LightItalic ]{OpenSans-Light}
+}{}
+
 
 %% ======================================
 %% LOGO
