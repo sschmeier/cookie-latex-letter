@@ -11,7 +11,7 @@ conda install cookiecutter
 
 ```bash
 # first time
-cookiecutter git@gitlab.com:s-schmeier/cookie-latex-letter.git
+cookiecutter git@github.com:sschmeier/cookie-latex-letter.git
 
 # subsequent use
 cookiecutter cookie-latex-letter
